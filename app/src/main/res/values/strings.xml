@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ConstraintTransitionSamples</string>
+  <string name="text_barrier">Barrier</string>
+</resources>

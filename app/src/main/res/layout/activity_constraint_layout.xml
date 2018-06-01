@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+  <!--
+    layout_constraintHorizontal_bias，layout_constraintVertical_bias用来决定水平方向、垂直方向距离坐标原点的偏移量
+    默认为0.5（50%），即完全居中
+    -->
+  <TextView
+      android:id="@+id/tv_bias"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/colorAccent"
+      android:maxWidth="200dp"
+      android:padding="8dp"
+      android:text="layout_constraintHorizontal_bias，layout_constraintVertical_bias用来决定水平方向、垂直方向距离坐标原点的偏移量默认为0.5（50%），即完全居中"
+      android:textAllCaps="false"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.02"
+      tools:ignore="HardcodedText"
+      />
+
+  <TextView
+      android:id="@+id/center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:background="@color/colorAccent"
+      android:text="圆心"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tv_bias"
+      tools:ignore="HardcodedText"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      android:maxWidth="100dp"
+      android:text="Radius计算的是两个View中心点的距离"
+      app:layout_constraintCircle="@id/center"
+      app:layout_constraintCircleAngle="135"
+      app:layout_constraintCircleRadius="100dp"
+      tools:ignore="HardcodedText"
+      />
+
+</android.support.constraint.ConstraintLayout>
